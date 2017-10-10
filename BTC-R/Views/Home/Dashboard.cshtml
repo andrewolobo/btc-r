@@ -1,0 +1,226 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_Pro.cshtml";
+}
+@section styles{
+    <style>
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Open Sans Condensed', sans-serif, sans-serif;
+        }
+
+        .btn {
+            border-radius: 0;
+            font-family: 'Open Sans Condensed', sans-serif, sans-serif;
+            margin-bottom: 15px;
+        }
+
+        .primary-bg {
+            background-color: #F34336;
+            color: #fff;
+        }
+
+            .primary-bg:hover, .primary-bg:focus {
+                background-color: #F22C1E;
+                color: #fff;
+            }
+
+        .secondary-bg {
+            background-color: #20BFA9;
+            color: #fff;
+        }
+
+            .secondary-bg:hover, secondary-bg:focus {
+                background-color: #1CA996;
+                color: #fff;
+            }
+
+        body {
+            /*background: url('http://farm3.staticflickr.com/2832/12303719364_c25cecdc28_b.jpg') fixed;*/
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABZ0RVh0Q3JlYXRpb24gVGltZQAxMC8yOS8xMiKqq3kAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzVxteM2AAABHklEQVRIib2Vyw6EIAxFW5idr///Qx9sfG3pLEyJ3tAwi5EmBqRo7vHawiEEERHS6x7MTMxMVv6+z3tPMUYSkfTM/R0fEaG2bbMv+Gc4nZzn+dN4HAcREa3r+hi3bcuu68jLskhVIlW073tWaYlQ9+F9IpqmSfq+fwskhdO/AwmUTJXrOuaRQNeRkOd5lq7rXmS5InmERKoER/QMvUAPlZDHcZRhGN4CSeGY+aHMqgcks5RrHv/eeh455x5KrMq2yHQdibDO6ncG/KZWL7M8xDyS1/MIO0NJqdULLS81X6/X6aR0nqBSJcPeZnlZrzN477NKURn2Nus8sjzmEII0TfMiyxUuxphVWjpJkbx0btUnshRihVv70Bv8ItXq6Asoi/ZiCbU6YgAAAABJRU5ErkJggg==);
+        }
+
+        html {
+            font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+
+        h5 {
+            font-size: 1.28571429em;
+            font-weight: 700;
+            line-height: 1.2857em;
+            margin: 0;
+        }
+
+        .card {
+            font-size: 1em;
+            overflow: hidden;
+            padding: 0;
+            border: none;
+            border-radius: .28571429rem;
+            box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+        }
+
+        .card-block {
+            font-size: 1em;
+            position: relative;
+            margin: 0;
+            padding: 1em;
+            border: none;
+            border-top: 1px solid rgba(34, 36, 38, .1);
+            box-shadow: none;
+        }
+
+        .card-img-top {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .card-title {
+            font-size: 1.28571429em;
+            font-weight: 700;
+            line-height: 1.2857em;
+        }
+
+        .card-text {
+            clear: both;
+            margin-top: .5em;
+            color: rgba(0, 0, 0, .68);
+        }
+
+        .card-footer {
+            font-size: 1em;
+            position: static;
+            top: 0;
+            left: 0;
+            max-width: 100%;
+            padding: .75em 1em;
+            color: rgba(0, 0, 0, .4);
+            border-top: 1px solid rgba(0, 0, 0, .05) !important;
+            background: #fff;
+        }
+
+        .card-inverse .btn {
+            border: 1px solid rgba(0, 0, 0, .05);
+        }
+
+        .profile {
+            position: absolute;
+            top: -12px;
+            display: inline-block;
+            overflow: hidden;
+            box-sizing: border-box;
+            width: 25px;
+            height: 25px;
+            margin: 0;
+            border: 1px solid #fff;
+            border-radius: 50%;
+        }
+
+        .profile-avatar {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        .profile-inline {
+            position: relative;
+            top: 0;
+            display: inline-block;
+        }
+
+            .profile-inline ~ .card-title {
+                display: inline-block;
+                margin-left: 4px;
+                vertical-align: top;
+            }
+
+        .text-bold {
+            font-weight: 700;
+        }
+
+        .meta {
+            font-size: 1em;
+            color: rgba(0, 0, 0, .4);
+        }
+
+            .meta a {
+                text-decoration: none;
+                color: rgba(0, 0, 0, .4);
+            }
+
+                .meta a:hover {
+                    color: rgba(0, 0, 0, .87);
+                }
+    </style>
+}
+
+<div class="row" style="background:white;padding:30px">
+    <div class="col-md-3" style="padding:10px;align-content:center;    margin-top: 6%;">
+        <div style="margin-bottom:5px">
+            <p>You're current account balance is:</p>
+        </div>
+        <div style="padding-bottom:10px">
+            <h1 style="font-size:56px;color:orange;padding: 11px;background: beige;">
+                0.001<small></small>
+            </h1>
+
+        </div>
+        <div style="padding-bottom:10px">
+            <small>0.0.12 (available balance)</small>
+        </div>
+        <div class="row" style="margin-top:10px;margin-bottom:10px;margin-left: -3px;">
+            <a href="" class="secondary-bg btn-lg" style="background:#20BFA9">Rank: #334</a>
+        </div>
+
+
+    </div>
+    <div class="col-md-9">
+        <li class="list-group-item">
+            <h4>User Log(s):</h4>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Operation date</th>
+                        <th>Description</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in ViewBag.logs)
+                    {
+                        <tr>
+                            <td>@item.date</td>
+                            <td>@item.action</td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </li>
+    </div>
+</div>
+
+
+
+@*<div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
+            <div class="card">
+                <img class="card-img-top" src="http://success-at-work.com/wp-content/uploads/2015/04/free-stock-photos.gif">
+                <div class="card-block">
+                    <h4 class="card-title">Tawshif Ahsan Khan</h4>
+                    <div class="meta">
+                        <a href="#">Friends</a>
+                    </div>
+                    <div class="card-text">
+                        Tawshif is a web designer living in Bangladesh.
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span class="float-right">Joined in 2013</span>
+                    <span><i class=""></i>75 Friends</span>
+                </div>
+            </div>
+        </div>
+    </div>*@

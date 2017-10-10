@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - BTCPrime</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="~/Content/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="~/Content/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="~/Content/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="~/Content/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="~/Content/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="~/Content/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="~/Content/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="~/Content/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="~/Content/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="~/Content/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="~/Content/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="~/Content/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="~/Content/favicon/favicon-16x16.png">
+    <link rel="manifest" href="~/Content/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="~/Content/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    @RenderSection("styles", required: false)
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <link href="~/Content//plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
+    <link href="~/Content/plugins/bower_components/toast-master/css/jquery.toast.css" rel="stylesheet">
+    <link href="~/Content/plugins/bower_components/morrisjs/morris.css" rel="stylesheet">
+    <link href="~/Content/plugins/bower_components/chartist-js/dist/chartist.min.css" rel="stylesheet">
+    <link href="~/Content/plugins/bower_components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet">
+    <link href="~/Content/css/animate.css" rel="stylesheet">
+    <link href="~/Content/css/style.css" rel="stylesheet">
+    <link href="~/Content/css/colors/default.css" id="theme" rel="stylesheet">
+</head>
+
+<body class="fix-header">
+    <div class="preloader">
+        <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+        </svg>
+    </div>
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-static-top m-b-0">
+            <div class="navbar-header">
+                <div class="top-left-part">
+                    <!-- Logo -->
+                    <a class="logo" href="index.html">
+                    </a>
+                </div>
+                <p style="color:grey">            </p>
+                <ul class="nav navbar-top-links navbar-right pull-right">
+                    <li>
+                        <a class="profile-pic" href="#"> <img src="~/Content/plugins/images/users/varun.jpg" alt="user-img" width="36" class="img-circle"><b class="hidden-xs"></b></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="navbar-default sidebar" role="navigation">
+            <div class="sidebar-nav slimscrollsidebar">
+                <div class="sidebar-head">
+                    <h3><span class="fa-fw open-close"><i class="ti-close ti-menu"></i></span> <span class="hide-menu">Navigation</span></h3>
+                </div>
+                <ul class="nav" id="side-menu">
+                    <li style="padding: 70px 0 0;">
+                        <a href="Dashboard" class="waves-effect"><i class="fa fa-dashboard fa-fw" aria-hidden="true"></i>Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="Addresses" class="waves-effect"><i class="fa fa-files-o fa-fw" aria-hidden="true"></i>Bitcoin Address</a>
+                    </li>
+                    <li>
+                        <a href="Fundme" class="waves-effect"><i class="fa fa-credit-card-alt fa-fw" aria-hidden="true"></i>Fund your Account</a>
+                    </li>
+                    <li>
+                        <a href="Transactions" class="waves-effect"><i class="fa fa-book fa-fw" aria-hidden="true"></i>View Transactions</a>
+                    </li>
+                    <li>
+                        <a href="Subaccounts" class="waves-effect"><i class="fa fa-list-alt fa-fw" aria-hidden="true"></i>Subaccounts</a>
+                    </li>
+                    <li>
+                        <a href="Logout" class="waves-effect"><i class="fa fa-sign-out fa-fw" aria-hidden="true"></i>Logout</a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+        <div id="page-wrapper">
+            <div class="container" style="margin-top: -54px;">
+                <div class="container-fluid">
+                    @RenderBody()
+                    @Scripts.Render("~/bundles/jquery")
+                    @Scripts.Render("~/bundles/bootstrap")
+                    @RenderSection("scripts", required: false)
+                    <script src="~/Content/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js"></script>
+                    <script src="~/Content/js/jquery.slimscroll.js"></script>
+                    <script src="~/Content/js/waves.js"></script>
+                    <script src="~/Content/plugins/bower_components/waypoints/lib/jquery.waypoints.js"></script>
+                    <script src="~/Content/plugins/bower_components/counterup/jquery.counterup.min.js"></script>
+                    <script src="~/Content/plugins/bower_components/chartist-js/dist/chartist.min.js"></script>
+                    <script src="~/Content/plugins/bower_components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js"></script>
+                    <script src="~/Content/plugins/bower_components/jquery-sparkline/jquery.sparkline.min.js"></script>
+                    <script src="~/Content/js/custom.min.js"></script>
+                    <script src="~/Content/js/dashboard1.js"></script>
+                    <script src="~/Content/plugins/bower_components/toast-master/js/jquery.toast.js"></script>
+                </div>
+            </div>
+
+            <footer class="footer text-center"> 2017 &copy; BTCPrime. All rights reserved. Deustchland, Germany </footer>
+        </div>
+    </div>
+</body>
+
+</html>
+
